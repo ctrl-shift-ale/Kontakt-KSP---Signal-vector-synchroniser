@@ -4,8 +4,8 @@ Please note that the script has been written by using Nojanath's KSP plug-in for
 
 https://github.com/nojanath/SublimeKSP
 
-This script aims to synchronise NOTE_HELD "while" loops under with the audio flow of SIGNAL VECTORS (SV). This allows to retrieve up-to-date , consistent reading positions of the audio buffers / files being played by the Kontakt instrument, as the return value of the KSP function get_event_par(#noteID#,EVENT_PAR_PLAY_POS) is updated only when the SIGNAL VECTOR is refreshed. 
-This, in turn, allows commands/events to be triggered at a scale of accuracy of an audio sample. Some typical applications of this syncing feature are the ability to trigger an audio file/buffer on phase with another one already being played, or to dynamically synchronise two notes attack in order to merge them into a single acoustic event.
+This script aims to synchronise "while NOTE_HELD" loops with the audio flow of SIGNAL VECTORS (SV). This allows the script to access to up-to-date , consistent reading positions of the audio buffers / files being played by the Kontakt instrument, as the return value of the KSP function get_event_par(#noteID#,EVENT_PAR_PLAY_POS) is updated only the istant when the SIGNAL VECTOR is refreshed. 
+This synchronisation allows commands/events to be triggered at a scale of accuracy of an audio sample. Some typical applications of this syncing feature are the ability to trigger an audio file/buffer on phase with another one already being played, or to dynamically synchronise two notes attack in order to merge them into a single acoustic event.
 
 You can see this script in action in the Kontakt 6 demo instrument titled "Notes synchroniser / phase aligner by Alessandro Quaranta", which is included in this repository.
 Instructions:
