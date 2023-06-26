@@ -1,5 +1,9 @@
 # Kontakt KSP - Signal vector synchroniser
 
+Please note that the script has been written by using Nojanath's KSP plug-in for Sublime.
+
+https://github.com/nojanath/SublimeKSP
+
 The main function of this script is to synchronise a NOTE_HELD while loop within a note on event with the audio SIGNAL VECTOR (SV). This allows to retrieve up-to-date , consistent reading positions the audio buffers / files being played, as the return value of the KSP function get_event_par(#noteID#,EVENT_PAR_PLAY_POS) is updated only when the SIGNAL VECTOR is refreshed. 
 This, in turn, allows a to trigger commands with a high degree of precision relative to a note playing position. As shown by this script's extra feature, one of the most basic application of this synchronisation to the SV is the ability to synchronise notes being played together to a single audio sample level of precision, which allows to dynamically play audio signals on phase, or merge two audio pulses into one. 
 
