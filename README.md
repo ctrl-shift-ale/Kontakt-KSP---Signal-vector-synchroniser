@@ -4,10 +4,10 @@ Please note that the script has been written by using Nojanath's KSP plug-in for
 
 https://github.com/nojanath/SublimeKSP
 
-The main function of this script is to synchronise a NOTE_HELD while loop within a note on event with the audio SIGNAL VECTOR (SV). This allows to retrieve up-to-date , consistent reading positions the audio buffers / files being played, as the return value of the KSP function get_event_par(#noteID#,EVENT_PAR_PLAY_POS) is updated only when the SIGNAL VECTOR is refreshed. 
-This, in turn, allows a to trigger commands with a high degree of precision relative to a note playing position. As shown by this script's extra feature, one of the most basic application of this synchronisation to the SV is the ability to synchronise notes being played together to a single audio sample level of precision, which allows to dynamically play audio signals on phase, or merge two audio pulses into one. 
+This script aims to synchronise NOTE_HELD "while" loops under with the audio flow of SIGNAL VECTORS (SV). This allows to retrieve up-to-date , consistent reading positions of the audio buffers / files being played by the Kontakt instrument, as the return value of the KSP function get_event_par(#noteID#,EVENT_PAR_PLAY_POS) is updated only when the SIGNAL VECTOR is refreshed. 
+This, in turn, allows commands/events to be triggered at a scale of accuracy of an audio sample. Some typical applications of this syncing feature are the ability to trigger an audio file/buffer on phase with another one already being played, or to dynamically synchronise two notes attack in order to merge them into a single acoustic event.
 
-This script has been configured to work with a Kontakt 6 demo instrument titled "Notes synchroniser / phase aligner by Alessandro Quaranta". 
+You can see this script in action in the Kontakt 6 demo instrument titled "Notes synchroniser / phase aligner by Alessandro Quaranta", which is included in this repository.
 Instructions:
 - load the instrument on a DAW (audio output must be stereo). The instrument is set to work at an audio sample rate of 96Khz. To try it on a different sample rate, edit the variable CONFIG.SR accordingly.
 - trigger a note within the midi range (A3/A4). This note is the MASTER note. All the following notes triggered while the MASTER note is still playing will be synced to it.
